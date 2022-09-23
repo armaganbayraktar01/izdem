@@ -11,7 +11,7 @@ function app_view($viewerName){
 
 //template
 
-function site_url($url = false){
+function app_url($url = false){ //site url
     return URL . '/' . $url;
 }
 
@@ -24,4 +24,9 @@ function route($index){
     global $route;
 
     return $route[$index] ?? false;
+}
+
+function site_settings($data){
+    global $site_settings; // app/site_settings.php
+    return isset($site_settings[$data]) ? $site_settings[$data] : false;
 }

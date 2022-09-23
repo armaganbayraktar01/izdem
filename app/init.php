@@ -3,6 +3,8 @@
 session_start();
 ob_start();
 
+header("Access-Control-Allow-Origin: *");
+
 //class yönetimi classes klasöründeki classları otomatik yükledik
 function loadClasses($className){
     require __DIR__ . '/classes/' . strtolower($className) . '.php';
@@ -19,6 +21,7 @@ try {
     die($th->getMessage());
 }
 
+require __DIR__ . '/site_settings.php';
 //helper klasöründeki tüm php dosyalarını çek ve değişkene ata
 
 foreach (glob(__DIR__ . '/helper/*.php') as $helperFile){

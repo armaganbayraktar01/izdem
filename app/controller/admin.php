@@ -19,9 +19,20 @@ if (!file_exists(admin_controller(route(1)))){
         'title' => 'Personel',
         'icon' => 'user',
         'submenu' => [
-            'list-user' => 'Personel Listesi',
-            'add-user' => 'Personel Ekle',
-            'edit-user' => 'Personel Güncelle'
+            'list-user' => [
+                'title' => 'Personel Listesi',
+                'icon' => 'user'
+            ],
+            'add-user' => [
+                'title' => 'Personel Ekle',
+                'icon' => 'user'
+            ],
+            'edit-user' => [
+                'title' => 'Personel Güncelle',
+                'icon' => ''
+            ]              
+            // 'add-user' => 'Personel Ekle',
+            // 'edit-user' => 'Personel Güncelle'
         ]
     ],
     'settings' => [
